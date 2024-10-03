@@ -6,8 +6,6 @@ pragma solidity ^0.8.27;
 
 // Import the Uniswap V3 interface
 import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
-
-// Import the library to help with token transfers (Uniswap v3)
 import "@uniswap/v3-periphery/contracts/libraries/TransferHelper.sol";
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -47,7 +45,7 @@ contract SimpleTokenSwapper {
             .ExactInputSingleParams({
                 tokenIn: tokenIn,
                 tokenOut: tokenOut,
-                fee: 5000,
+                fee: 10000,
                 recipient: recipient,
                 deadline: block.timestamp + 20,
                 amountIn: amountIn,
